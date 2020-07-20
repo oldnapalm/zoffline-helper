@@ -1,6 +1,6 @@
 # zoffline-helper
 
-Scripts to configure Zwift client (for Windows 10) to use zoffline server, connect to Strava and download Zwift profile.
+Scripts to configure Zwift client (for Windows) to use zoffline server, connect to Strava and download Zwift profile.
 
 ## To install zwift-offline:
 
@@ -36,5 +36,5 @@ zwift-offline **must be disabled** (without Zwift servers in hosts file) before 
 * Create a file called "enable_ghosts.txt" inside the ``storage`` directory.
 * When you save an activity the ghost will be saved in ``storage\<player_id>\ghosts``.
 * Copy ghost files to ``storage\<player_id>\ghosts\load`` and they will be loaded in the next activity.
-
-You must ensure that the loaded ghost files are from the same map and route you are going to ride.
+  * You must ensure that the loaded files are from the same route you are going to ride.
+* If you want the ghosts to spawn in the start line, copy the file [start_lines.csv](https://github.com/zoffline/zwift-offline/blob/master/start_lines.csv) to the storage directory.
