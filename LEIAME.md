@@ -1,6 +1,6 @@
 # zoffline-helper
 
-Scripts para configurar o Zwift (no Windows 10) para usar o zoffline, conectar ao Strava e baixar o perfil do Zwift.
+Scripts para configurar o Zwift (no Windows) para usar o zoffline, conectar ao Strava e baixar o perfil do Zwift.
 
 ## Para instalar o zwift-offline:
 
@@ -36,8 +36,8 @@ O zwift-offline **deve estar desativado** antes de rodar o get_profile.
 * Crie um arquivo **enable_ghosts.txt** na pasta ``storage``.
 * Quando salvar a atividade, um fantasma será gravado em ``storage\player_id\ghosts``.
 * Copie pelo menos um arquivo para a pasta ``storage\player_id\ghosts\load``, ele será carregado na próxima atividade.
-
-Você deve assegurar-se de que o fantasma carregado é do mesmo mapa e rota que você vai percorrer.
+  * Você deve assegurar-se de que o fantasma carregado é da mesma rota que você vai percorrer.
+* Se quiser que os fantasmas comecem na linha de largada, copie o arquivo [start_lines.csv](https://github.com/zoffline/zwift-offline/blob/master/start_lines.csv) para a pasta ``storage``.
 
 ## Nota:
 
