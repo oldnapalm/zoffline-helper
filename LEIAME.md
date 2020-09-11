@@ -36,7 +36,7 @@ O zwift-offline **deve estar desativado** antes de rodar o get_profile.
 * Crie um arquivo **enable_ghosts.txt** na pasta ``storage``.
 * Quando salvar a atividade, um fantasma será gravado em ``storage\player_id\ghosts\<course>\<road>``.
 * Se quiser que os fantasmas comecem na linha de largada, copie o arquivo [start_lines.csv](https://github.com/zoffline/zwift-offline/blob/master/start_lines.csv) para a pasta ``storage``.
-  * Mova para cima as linhas de chegada de "Road to Sky" e "Ven-Top" para ativá-las.
+  * Mova para cima as linhas de largada de "Road to Sky" e "Ven-Top" para ativá-las.
 
 ## Nota:
 
