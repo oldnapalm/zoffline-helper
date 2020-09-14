@@ -31,13 +31,6 @@ Somente atividades com **mais de 5 km** serão carregadas no Strava.
 
 O zwift-offline **deve estar desativado** antes de rodar o get_profile.
 
-## Para ativar o recurso de fantasmas (opcional):
-
-* Crie um arquivo **enable_ghosts.txt** na pasta ``storage``.
-* Quando salvar a atividade, um fantasma será gravado em ``storage\player_id\ghosts\<course>\<road>``.
-* Na próxima vez que percorrer a mesma rota, o fantasma será carregado.
-* Edite o arquivo **start_lines.csv** para ativar linhas de largada opcionais ("Jungle Circuit", "Road to Sky" e "Ven-Top").
-
 ## Nota:
 
 Os executáveis são feitos com o pyinstaller. Um efeito colateral é que alguns antivírus detectam os executáveis do pyinstaller como malware. Esse é um problema conhecido e inevitável. Se preferir, você pode não usar estes executáveis e rodar diretamente do código fonte. Instruções em português em https://outlawcowboy.org/2019/04/26/zwift-offline/
