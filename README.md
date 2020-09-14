@@ -30,10 +30,3 @@ Only activities **longer than 5 km** will be uploaded to Strava.
 * Move the resulting profile.bin into the ``storage`` directory (it will be moved to ``storage\player_id`` when you run zwift-offline).
 
 zwift-offline **must be disabled** (without Zwift servers in hosts file) before running get_profile.
-
-## To enable ghosts (optional):
-
-* Create a file called "enable_ghosts.txt" inside the ``storage`` directory.
-* When you save an activity the ghost will be saved in ``storage\<player_id>\ghosts\<course>\<road>``.
-* Next time you ride the same route, the ghost will be loaded.
-* Edit the file **start_lines.csv** to enable optional start lines ("Jungle Circuit", "Road to Sky" and "Ven-Top").
