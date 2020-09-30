@@ -24,6 +24,8 @@ To use Zwift online like normal, open the **Edit hosts** shortcut and comment ou
 
 Only activities **longer than 5 km** will be uploaded to Strava.
 
+Join the zoffline Strava group https://www.strava.com/clubs/zoffline
+
 ## To download your Zwift profile (optional):
 
 * Run **get_profile**, type your Zwift login (e-mail) and password.
