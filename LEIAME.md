@@ -24,6 +24,8 @@ Para usar o Zwift online normalmente, abra o atalho **Edit hosts** e remova a li
 
 Somente atividades com **mais de 5 km** serão carregadas no Strava.
 
+Entre no grupo **zoffline** no Strava https://www.strava.com/clubs/zoffline
+
 ## Para baixar o seu perfil do Zwift (opcional):
 
 * Execute o **get_profile**, digite seu login do Zwift (e-mail) e sua senha.
