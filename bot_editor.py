@@ -67,7 +67,7 @@ if file_exists(ROUTE_FILE):
     g = udp_node_msgs_pb2.Ghost()
     with open(ROUTE_FILE, 'rb') as f:
         g.ParseFromString(f.read())
-    START_LINES_FILE = os.path.join(SCRIPT_DIR, 'start_lines.csv')
+    START_LINES_FILE = os.path.join(SCRIPT_DIR, 'bot_start_lines.csv')
     if file_exists(START_LINES_FILE) and len(g.states) > 0:
         f = open(START_LINES_FILE, 'r')
         sl = [tuple(line) for line in csv.reader(f)]
