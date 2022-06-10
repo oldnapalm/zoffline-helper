@@ -6,7 +6,7 @@ import sys
 sys.modules['FixTk'] = None
 
 a = Analysis(['bot_editor.py'],
-             pathex=[],
+             pathex=['protobuf'],
              binaries=[],
              datas=[],
              hiddenimports=[],
