@@ -31,6 +31,7 @@ import json
 import os
 import requests
 import sys
+sys.path.append(os.path.join(sys.path[0], 'protobuf')) # otherwise import in .proto does not work
 import protobuf.activity_pb2 as activity_pb2
 import protobuf.profile_pb2 as profile_pb2
 
@@ -133,7 +134,7 @@ def get_player_id(session, access_token):
             print('Response HTTP Status Code: {status_code}'.format(
                 status_code=response.status_code))
 
-        profile = profile_pb2.Profile()
+        profile = profile_pb2.PlayerProfile()
         profile.ParseFromString(response.content)
         return profile.id
 
