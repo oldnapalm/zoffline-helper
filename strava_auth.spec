@@ -17,8 +17,10 @@ a = Analysis(['strava_auth.py'],
              win_private_assemblies=False,
              cipher=block_cipher,
              noarchive=False)
-pyz = PYZ(a.pure, a.zipped_data,
-             cipher=block_cipher)
+a.binaries = [x for x in a.binaries
+              if not os.path.dirname(x[1]).lower().startswith("c:\\program files")
+              and not os.path.dirname(x[1]).lower().startswith("c:\\windows")]
+pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 exe = EXE(pyz,
           a.scripts,
           a.binaries,
@@ -31,10 +33,10 @@ exe = EXE(pyz,
           strip=False,
           upx=True,
           runtime_tmpdir=None,
-          console=True )
+          console=True)
 
 import subprocess
 subprocess.call(['C:\\Program Files (x86)\\Windows Kits\\10\\App Certification Kit\\signtool.exe', 'sign',
-                '/f', 'ssl\cert-zwift-com.p12',
+                '/f', 'ssl\cert-zwift-com.p12', '/fd', 'sha1',
                 '/t', 'http://timestamp.digicert.com',
-                'dist\strava_auth.exe'])
+                'dist\\strava_auth.exe'])

@@ -1,0 +1,45 @@
+name: pyinstaller
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+
+    - uses: engineerd/configurator@v0.0.8
+      with:
+        name: "upx.exe"
+        url: "https://github.com/upx/upx/releases/download/v4.0.1/upx-4.0.1-win64.zip"
+        pathInArchive: "upx-4.0.1-win64/upx.exe"
+
+    - run: pip install -r requirements.txt
+    - run: pyinstaller bot_editor.spec
+    - run: pyinstaller get_profile.spec
+    - run: pyinstaller strava_auth.spec
+    - run: pyinstaller upload_activity.spec
+
+    - uses: vimtor/action-zip@v1
+      with:
+        files: dist
+        dest: zoffline-helper.zip
+
+    - uses: WebFreak001/deploy-nightly@v1.1.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # automatically provided by github actions
+      with:
+        upload_url: https://uploads.github.com/repos/oldnapalm/zoffline-helper/releases/93612294/assets{?name,label}
+        release_id: 93612294
+        asset_path: zoffline-helper.zip
+        asset_name: zoffline-helper.zip
+        asset_content_type: application/zip
