@@ -17,9 +17,6 @@ a = Analysis(['upload_activity.py'],
              win_private_assemblies=False,
              cipher=block_cipher,
              noarchive=False)
-a.binaries = [x for x in a.binaries
-              if not os.path.dirname(x[1]).lower().startswith("c:\\program files")
-              and not os.path.dirname(x[1]).lower().startswith("c:\\windows")]
 pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 exe = EXE(pyz,
           a.scripts,
@@ -32,6 +29,7 @@ exe = EXE(pyz,
           bootloader_ignore_signals=False,
           strip=False,
           upx=True,
+          upx_exclude=['python3.dll', 'api-ms-win-*.dll'],
           runtime_tmpdir=None,
           console=True)
 
