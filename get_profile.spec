@@ -35,6 +35,6 @@ exe = EXE(pyz,
 
 import subprocess
 subprocess.call(['C:\\Program Files (x86)\\Windows Kits\\10\\App Certification Kit\\signtool.exe', 'sign',
-                '/f', 'ssl\cert-zwift-com.p12', '/fd', 'sha1',
+                '/f', 'ssl\\cert-zwift-com.p12', '/fd', 'sha1',
                 '/t', 'http://timestamp.digicert.com',
                 'dist\\get_profile.exe'])
