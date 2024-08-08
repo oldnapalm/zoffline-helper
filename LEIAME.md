@@ -18,10 +18,9 @@ Para usar o Zwift online normalmente, abra o atalho **hosts** e remova a linha c
 
 ## Para carregar as atividades no Strava (opcional):
 
-* Obtenha o CLIENT_ID e CLIENT_SECRET de https://www.strava.com/settings/api
-* Execute ``strava_auth.exe --client-id CLIENT_ID --client-secret CLIENT_SECRET`` e autorize quando o Firewall do Windows perguntar.
+* Execute o **strava_auth** e autorize quando o Firewall do Windows perguntar.
 * Abra http://localhost:8000/ no navegador, faça login no Strava e autorize o zwift-offline a carregar suas atividades.
-* Será criado um arquivo ``strava_token.txt``, mova esse arquivo para a pasta ``storage\1``.
+* Será criado um arquivo **strava_token**, mova esse arquivo para a pasta ``storage\1``.
 * Se estiver testando, ande pelo menos 300 metros, atividades mais curtas não serão carregadas.
 
 Entre no grupo **zoffline** no Strava https://www.strava.com/clubs/zoffline
@@ -30,4 +29,4 @@ Entre no grupo **zoffline** no Strava https://www.strava.com/clubs/zoffline
 
 * Desative o zwift-offline (veja [Ativando/Desativando o zwift-offline](https://github.com/oldnapalm/zoffline-helper/blob/master/LEIAME.md#ativandodesativando-o-zwift-offline) acima).
 * Execute o **get_profile**, digite seu login do Zwift (e-mail) e sua senha.
-* Serão criados os arquivos ``profile.bin``, ``achievements.bin`` e ``economy_config.txt``, mova esses arquivos para a pasta ``storage\1``.
+* Serão criados os arquivos **profile.bin** e **achievements.bin**, mova esses arquivos para a pasta ``storage\1``.

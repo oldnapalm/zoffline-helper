@@ -18,10 +18,9 @@ To use Zwift online like normal, open the **hosts** shortcut and comment out or 
 
 ## To upload activities to Strava (optional):
 
-* Get CLIENT_ID and CLIENT_SECRET from https://www.strava.com/settings/api
-* Run ``strava_auth.exe --client-id CLIENT_ID --client-secret CLIENT_SECRET`` and allow it in Windows Firewall.
+* Run **strava_auth** and allow it in Windows Firewall.
 * Open http://localhost:8000/ and authorize.
-* Move the resulting ``strava_token.txt`` into the ``storage\1`` directory.
+* Move the resulting strava_token.txt into the ``storage\1`` directory.
 * If testing, ride at least 300 meters, shorter activities won't be uploaded.
 
 Join the **zoffline** Strava group https://www.strava.com/clubs/zoffline
@@ -30,4 +29,4 @@ Join the **zoffline** Strava group https://www.strava.com/clubs/zoffline
 
 * Disable zwift-offline (see [Enabling/Disabling zwift-offline](https://github.com/oldnapalm/zoffline-helper#enablingdisabling-zwift-offline) above).
 * Run **get_profile**, type your Zwift login (e-mail) and password.
-* Move the resulting ``profile.bin``, ``achievements.bin`` and ``economy_config.txt`` into the ``storage\1`` directory.
+* Move the resulting profile.bin and achievements.bin into the ``storage\1`` directory.
