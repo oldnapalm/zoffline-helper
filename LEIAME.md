@@ -30,4 +30,4 @@ Entre no grupo **zoffline** no Strava https://www.strava.com/clubs/zoffline
 
 * Desative o zwift-offline (veja [Ativando/Desativando o zwift-offline](https://github.com/oldnapalm/zoffline-helper/blob/master/LEIAME.md#ativandodesativando-o-zwift-offline) acima).
 * Execute o **get_profile**, digite seu login do Zwift (e-mail) e sua senha.
-* Serão criados os arquivos ``profile.bin`` e ``achievements.bin``, mova esses arquivos para a pasta ``storage\1``.
+* Serão criados os arquivos ``profile.bin``, ``achievements.bin`` e ``economy_config.txt``, mova esses arquivos para a pasta ``storage\1``.
