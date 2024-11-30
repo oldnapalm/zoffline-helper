@@ -1,3 +1,4 @@
 protobuf==4.21.12
 stravalib==1.1.0
+garth
 pyinstaller

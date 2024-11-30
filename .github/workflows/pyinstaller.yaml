@@ -28,15 +28,14 @@ jobs:
     - run: pyinstaller get_profile.spec
     - run: pyinstaller strava_auth.spec
     - run: pyinstaller upload_activity.spec
+    - run: pyinstaller garmin_auth.spec
 
-    - uses: vimtor/action-zip@v1
+    - uses: vimtor/action-zip@v1.2
       with:
         files: dist configure_client.bat disable_zoffline.bat resources
         dest: zoffline-helper.zip
 
-    - uses: WebFreak001/deploy-nightly@v1.1.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # automatically provided by github actions
+    - uses: WebFreak001/deploy-nightly@v3.1.0
       with:
         upload_url: https://uploads.github.com/repos/oldnapalm/zoffline-helper/releases/169846138/assets{?name,label}
         release_id: 169846138
